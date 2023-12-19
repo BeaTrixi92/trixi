@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!--METAINFORMACIÓN DE LA PÁGINA WEB-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="name" content="Trabajos">
+        <meta name="description" content="Página web sobre Trixi">
+
+        <title>Trixi</title>
+        <link rel="icon" href="Images/IVC_trixi-1-removebg-preview.png">
+        <link rel="stylesheet" href="Estilos/estilos.css">
+    </head>
+
+    <!--CONTENIDO DE LA PÁGINA WEB-->
+    <body>
+        <!--BARRA DE NAVEGACIÓN-->
+        <nav>
+            <a href="Inicio.html"><img class="logo" src="Images/IVC_trixi-1-removebg-preview.png" alt="Trixi"></a>
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Sobremi.html">Sobre mí</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!--CABECERA-->
+        <header>
+        
+            <h1>Mi trabajo</h1>
+        </header>
+
+        <!--CONTENIDO PRINCIPAL-->
+        <main>
+            
+            <style>
+                div {
+                    text-align: center;
+                }
+            </style>
+            <section class="cdiseño">
+                <h2>DISEÑO</h2>
+                <div>
+                    <img class="fotos" id="im0" src="Trabajos/Diseño/Cartel acro-01.png" alt="">
+                    <img class="fotos" id="im1" src="Trabajos/Diseño/Merinas final-02.png" alt="">
+                    <img class="fotos" id="im2" src="Trabajos/Diseño/fedi21-01.png" alt="">
+                    <img class="fotos" id="im3" src="Trabajos/Diseño/imán-01.png" alt="">
+                    <img class="fotos" id="im4" src="Trabajos/Diseño/Libreta-01.png" alt="">
+                    <img class="fotos" id="im5" src="Trabajos/Diseño/Gif septiembre 2022 png.png" alt="">
+                    <img class="fotos" id="im6" src="Trabajos/Diseño/Logo CREEN SOLAR-01.png" alt="">
+                    <img class="fotosagrandar" id="im7" src="Trabajos/Diseño/MODELO8-01.png" alt="">
+                    <img class="fotosagrandar" id="im8" src="Trabajos/Diseño/Revista Octubre 2023.jpeg" alt="">
+                    <img class="fotos" id="im9" src="Trabajos/Diseño/Placa-01.png" alt="">
+                    <img class="fotos" id="im10" src="Trabajos/Diseño/tarjeton-03-03.png" alt="">
+                </div>
+                <div>
+                    <button onclick="anterior ()"><<<</button>
+                    <button onclick="siguiente ()">>>></button>
+                </div>
+            </section>
+            <section class="cdiseño">
+                <h2>EVENTOS</h2>
+                <div>
+                    <img class="fotos" id="tr0" src="Trabajos/20 Aniversario.jpeg" alt="">
+                    <img class="fotos" id="tr1" src="Trabajos/Cariñena.jpeg" alt="">
+                    <img class="fotos" id="tr2" src="Trabajos/IMG-20220319-WA0025.jpg" alt="">
+                    <img class="fotos" id="tr3" src="Trabajos/IMG20221010124707.jpg" alt="">
+                    <img class="fotos" id="tr4" src="Trabajos/IMG20221016133617.jpg" alt="">
+                    <img class="fotos" id="tr5" src="Trabajos/IMG20230327171753.jpg" alt="">
+                    <img class="fotos" id="tr6" src="Trabajos/IMG20230328093336.jpg" alt="">
+                </div>
+                <div>
+                    <button onclick="anteriore ()"><<<</button>
+                    <button onclick="siguientee ()">>>></button>
+                </div>
+            </section>
+        
+            <script>
+                let imagenes = [
+                    document.getElementById ("im0"),
+                    document.getElementById ("im1"),
+                    document.getElementById ("im2"),
+                    document.getElementById ("im3"),
+                    document.getElementById ("im4"),
+                    document.getElementById ("im5"),
+                    document.getElementById ("im6"),
+                    document.getElementById ("im7"),
+                    document.getElementById ("im8"),
+                    document.getElementById ("im9"),
+                    document.getElementById ("im10"),
+                ];
+                let imagenActual = 0;
+                
+                imagenes [1].style.display = "none";
+                imagenes [2].style.display = "none";
+                imagenes [3].style.display = "none";
+                imagenes [4].style.display = "none";
+                imagenes [5].style.display = "none";
+                imagenes [6].style.display = "none";
+                imagenes [7].style.display = "none";
+                imagenes [8].style.display = "none";
+                imagenes [9].style.display = "none";
+                imagenes [10].style.display = "none";
+
+            function siguiente() {
+            imagenes [imagenActual].style.display = "none";//desaparecemos la imagen actual
+            
+            if (imagenActual===10) {imagenActual = 0;}
+            else { 
+                imagenActual += 1;} //sumamos 1 al valor actual para pasar a la siguiente imagen       
+            imagenes [imagenActual].style.display = "inline-block"; //mostramos la imagen con el nuevo valor indice
+            }
+            function anterior () {
+            imagenes [imagenActual].style.display = "none";
+
+            if (imagenActual === 0) {imagenActual = 10;}
+            else { 
+                imagenActual -= 1;}
+            imagenes [imagenActual].style.display = "inline-block";
+            }
+            
+                let eventos = [
+                    document.getElementById ("tr0"),
+                    document.getElementById ("tr1"),
+                    document.getElementById ("tr2"),
+                    document.getElementById ("tr3"),
+                    document.getElementById ("tr4"),
+                    document.getElementById ("tr5"),
+                    document.getElementById ("tr6"),
+                ]
+                let eventosActual = 0;
+
+                eventos [1].style.display = "none";
+                eventos [2].style.display = "none";
+                eventos [3].style.display = "none";
+                eventos [4].style.display = "none";
+                eventos [5].style.display = "none";
+                eventos [6].style.display = "none";
+
+            function siguientee () {
+            eventos [eventosActual].style.display = "none";
+            if (eventosActual === 6) {eventosActual = 0;}
+            else {
+                eventosActual += 1;}
+            eventos [eventosActual].style.display = "inline-block";
+            }
+            function anteriore () {
+            eventos [eventosActual].style.display = "none";
+            
+            if (eventosActual === 0) {eventosActual = 6;}
+            else {
+                eventosActual -= 1;}
+                eventos [eventosActual].style.display = "inline-block";
+            }
+            
+            </script>
+            
+
+            <h2>¿Te ha gustado?</h2>
+
+            <div class="botonesgustar">
+                <div class="gustar desplegable">
+                    <h2>
+                        <button class="botoncom">Comparte</button> 
+                    </h2>
+                    <p class="desplegable-contenido">Insta LinkedIn</p>
+                </div>
+                <div class="gustar">
+                    <h2>
+                        <a href="mailto:bsantaeugeniam@gmail.com">Contrátame</a>
+                    </h2>
+                </div>
+                <div class="gustar desplegable comentario">
+                    <h2>
+                        <button class="botoncom">Dejame un comentario</button> 
+                    </h2>
+                    <p class="desplegable-contenido">Dejame tu comentario</p>
+                </div>
+            </div>  
+        </main>
+
+
+        <!--PIE DE PÁGINA-->
+        <footer>
+            <img src="Images/footer-02.png" alt="T pie de pagina">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <p>&copy;1992-2023 Trixi Diseño y desarrollo</p>
+        </footer>
+    </body>
+</html>
